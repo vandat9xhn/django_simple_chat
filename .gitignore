@@ -1,0 +1,15 @@
+# test
+/__def_test
+
+# front-end
+/redux_tsc*
+!/redux_tsc/dist
+
+# media
+/media
+!/media/**.py
+
+# back-end
+/.idea
+db.sqlite3
+manage.py
