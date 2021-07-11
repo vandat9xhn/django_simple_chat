@@ -2,8 +2,8 @@
 /__def_test
 
 # front-end
-/redux_tsc*
-!/redux_tsc/dist
+/redux_tsc/
+!redux_tsc/dist/**
 
 # media
 /media

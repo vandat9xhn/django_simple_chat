@@ -45,7 +45,7 @@ def message_l(request):
         room_model=models.Room.objects.get(name='world')
     ).order_by('-created_time')
 
-    data = list(message_model[int(c_count):int(c_count + size)].values())
+    data = list(message_model[int(c_count):int(c_count) + int(size)].values())
 
     profile_model = ProfileModel.objects.all()
     result_data = []

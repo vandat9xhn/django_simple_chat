@@ -81,10 +81,10 @@ def account_register(request):
         'id': user.id,
         'first_name': first_name,
         'last_name': last_name,
-        'picture': picture
     }
-    models.ProfileModel.objects.create(
-        **data_profile
+    profile_model = models.ProfileModel.objects.create(
+        **data_profile,
+        picture=picture
     )
 
-    return HttpResponse(json.dumps(data_profile))
+    return HttpResponse(json.dumps({**data_profile, 'picture': profile_model.picture.url}))
